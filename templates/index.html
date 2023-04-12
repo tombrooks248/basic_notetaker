@@ -4,4 +4,14 @@
     <h1>Hello World!</h1>
     <h2>Welcome to FlaskApp!</h2>
     <h3> THis will soon become a notetake app</h3>
+
+  <h3> current notes</h3>
+
+  {% for num, note in enumerate(notes_list) %}
+    <h3>{{num + 1}}</h3>
+    <p>{{note['title']}} </p>
+    <p>{{note['content']}} </p>
+
+  {% endfor %}
+
 {% endblock %}
